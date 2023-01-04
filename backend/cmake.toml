@@ -1,0 +1,13 @@
+# Reference: https://build-cpp.github.io/cmkr/cmake-toml
+[project]
+name = "backend"
+
+[fetch-content.cpp-httplib]
+git = "https://github.com/yhirose/cpp-httplib"
+tag = "v0.11.3"
+
+[target.backend]
+type = "executable"
+sources = ["src/backend/main.cpp"]
+compile-features = ["cxx_std_11"]
+link-libraries = ["httplib::httplib"]
